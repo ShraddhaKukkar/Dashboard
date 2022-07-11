@@ -31,7 +31,6 @@
     width: 150px;
     height: 52px;
     margin: 10px;
-    /* background: red; */
     opacity: 1;
 }
 
@@ -83,7 +82,7 @@
 .display_card_out {
     width: 91%;
     margin-right: -135px;
-    height: 100vh;
+    height: auto;
     min-height: 100vh;
     z-index: 10;
 }
@@ -95,40 +94,15 @@
     width: 100%;
     height: 100%;
     background: #ffffff;
-    box-shadow: -8px 5px 25px #cad6fb6d;
+    box-shadow: -8px 5px 25px #cad6fb6d, -20px 10px 0px #ffffffc6, -30px 10px 25px #cad6fb6d, -40px 20px 0px #ffffff6b, -40px 20px 25px #cad6fb6d;
     border-radius: 84px 0px 0px 0px;
     z-index: 10;
 }
 
-.display_card_out::before {
-    content: "";
-    position: absolute;
-    margin-top: 10px;
-    margin-left: -20px;
-    width: 160px;
-    border-radius: 84px 0px 0px 0px;
-    box-shadow: -8px 5px 25px #cad6fb6d;
-    height: calc(100% - 10px);
-    background: #ffffffc6;
-    z-index: 9;
-}
-
-.display_card_out::after {
-    content: "";
-    position: absolute;
-    top: 150px;
-    margin-left: -35px;
-    width: 160px;
-    border-radius: 84px 0px 0px 0px;
-    box-shadow: -8px 5px 25px #cad6fb6d;
-    height: calc(100% - 30px);
-    background: #ffffff6b;
-    z-index: 8;
-}
-
 .main_display_containt {
     width: calc(100% - 350px);
-    height: 576px;
+    min-height: 576px;
+    height: auto;
 }
 
 .fund_details_cards {
@@ -197,9 +171,15 @@
     margin-top: 30px;
 }
 
+td:last-child {
+    border-radius: 0 10px 10px 0;
+    color: green;
+}
+
 .refral_section {
     width: 350px;
-    height: 576px;
+    min-height: 576px;
+    height: auto;
     background: #e1dcff 0% 0% no-repeat padding-box;
 }
 
@@ -544,6 +524,39 @@ th:last-child {
 .four-box .down p {
     font-size: 12px;
     color: #6e7f97;
+}
+
+.donut-text {
+    margin-top: 30px;
+    display: flex;
+    text-align: left;
+}
+
+.donut {
+    display: block;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border: 50px solid red;
+    border-radius: 100%;
+    border: 40px solid #D9F8FF;
+    border-top: 40px solid #9384F482;
+    border-left: 40px solid #9384F482;
+    border-right: 40px solid #D9F8FF;
+    margin-top: 20px;
+}
+
+.inner-donut {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border: 1px solid rgb(170, 170, 170);
+    border-radius: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
 }
 
 
