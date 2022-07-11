@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="CSS/dashboard.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container_body">
+        <div class="nav">
+            <div class="demo_panel"><img src="Img/Demo-panel-svg.png" style="width: 150px; height: fit-content;"></div>
+            <div class="profile__">
+                <div class="d-flex align-items-center">
+                    <h6>Lexi Hensler</h6><img src="Img/profile.jpg" alt="Profile" class="rounded-circle z-depth">
+                </div>
+            </div>
+        </div>
+        <div class="navigation_tabs">
+            <div class="active"><img src="Img/Dashboard.svg" style="width:20px; height:20px;">Dashboard</div>
+            <div class="2">Profile</div>
+            <div class="3">Invest wallet</div>
+            <div class="4">Team summary</div>
+            <div class="5">Income</div>
+            <div class="6">Withdrawal wallet</div>
+            <div class="7">Deposit fund transfer</div>
+            <div class="8">Reports</div>
+            <div class="9">Structure Balance</div>
+        </div>
+        <div class="display_card_out">
+            <div class="display_card">
+                <div class="main_display_containt">
+                    <!-- First layer -->
+                    <div class="utilities_panel d-flex
+                            justify-content-between">
+                        <!-- 3 component -->
+                        <div class="fund_details_cards flex-column
+                                align-items-center gx-5">
+                            <div class="box-1 d-flex p-3">
+                                <img src="Img/total.svg" alt="withdrawal" style="width: 40px; height: 40px;">
+                                <div class="text-start">
+                                    <h6>Total</h6>
+                                    <p class="mb-0">$542.5</p>
+                                </div>
+                            </div>
+                            <div class="box-2 d-flex p-3">
+                                <img src="Img/wallet.svg" alt="withdrawal" style="width: 40px; height: 40px;">
+                                <div class="text-start">
+                                    <h6>Total</h6>
+                                    <p class="mb-0">$542.5</p>
+                                </div>
+                            </div>
+                            <div class="box-3 d-flex p-3">
+                                <img src="Img/withdrawal.svg" alt="withdrawal" style="width: 40px;
+                                        height: 40px;">
+                                <div class="text-start">
+                                    <h6>Total</h6>
+                                    <p class="mb-0">$542.5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- circle -->
+                        <canvas id="myChart1" width="400" height="150"></canvas>
+                        <!-- graph -->
+                        <div class="chart">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                    <!-- Second layer -->
+                    <div class="f-box d-flex justify-content-between">
+                        <div class="one-box w-25">
+                            <div class="up">
+                                <img src="Img/roi.png" style="width: 30px;
+                                        height: fit-content;">
+                                <p class="mb-0">ROI Income</p>
+                            </div>
+                            <div class="down align-text-bottom">
+                                <h4>$865.2</h4>
+                                <p class="mb-0">+$20.9k</p>
+                            </div>
+                        </div>
+                        <div class="two-box w-25 mx-4">
+                            <div class="up">
+
+                            </div>
+                            <div class="down">
+                                <div class="img-sec align-text-top">
+                                    <img src="Img/roi.png" style="width:
+                                            30px; height: fit-content;">
+                                    <p class="mb-0">Direct Income</p>
+                                </div>
+                                <h4>$500</h4>
+                                <p class="mb-0">-29 Trades</p>
+                            </div>
+                        </div>
+                        <div class="three-box w-25">
+                            <div class="up">
+                                <img src="Img/roi.png" style="width: 30px;
+                                        height: fit-content;">
+                                <p class="mb-0">Binary Income</p>
+                            </div>
+                            <div class="down align-text-bottom">
+                                <h4>$750.00</h4>
+                                <p class="mb-0">+$2.8k</p>
+                            </div>
+                        </div>
+                        <div class="four-box w-25 ms-4">
+                            <div class="up">
+                                <img src="Img/roi.png" style="width: 30px;
+                                        height: fit-content;">
+                                <p class="mb-0">Current Investment</p>
+                            </div>
+                            <div class="down align-text-bottom">
+                                <h4>$500.02</h4>
+                                <p class="mb-0">+2.95%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Third layer -->
+                    <div class="third-layer table-responsive mt-3">
+                        <h6>Total Users</h6>
+                        <table class="table justify-content-between m-auto">
+                            <tr>
+                                <th scope="col">Sr No.</th>
+                                <th scope="col">User Id</th>
+                                <th scope="col">Position</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                            <tr>
+                                <td scope="row">1.</td>
+                                <td>8563941</td>
+                                <td>left</td>
+                                <td>2021/12/02</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">2.</td>
+                                <td>2636860</td>
+                                <td>left</td>
+                                <td>2021/11/21</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">3.</td>
+                                <td>4425110</td>
+                                <td>left</td>
+                                <td>2021/11/19</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">4.</td>
+                                <td>8288512</td>
+                                <td>left</td>
+                                <td>2021/11/17</td>
+                                <td>Active</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="refral_section">
+                    <div class="top-sec">
+                        <div class="art-img"><img src="Img/referral-vector.svg" style="width:350px; height:fit-content"></div>
+                        <div class="link-name">
+                            <h3 class="pt-5">Referral Link</h3>
+                            <p class="break"><a href="http://www.demo.com/replica/demo/user#/register/?ref_i">http://www.demo.com/replica/demo/user#/register/?ref_i</a></p>
+                            <div class="btn-bg">
+                                <p class="text-white mb-0"><img src="Img/copy.svg" alt="Copy" style="width:15px;
+                                            height:fit-content;"> Copy Referral Link
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="middle-sec d-flex">
+                        <div class="button-color">
+                            <p>Add Fund</p>
+                        </div>
+                        <div class="button-grey">
+                            <p>Withdrawal</p>
+                        </div>
+                    </div>
+                    <div class="deposit-bg">
+                        <div class="box-4 text-center">
+                            <h6>Total Deposit Income</h6>
+                            <p class="mb-0">$1000</p>
+                        </div>
+                        <div class="form pt-4 mb-4">
+                            <p>Enter Amount (In USD)</p>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div>
+                            <div class="circle">
+                                <h3 class="align-middle">$100</h3>
+                            </div>
+                        </div>
+                        <div class="dropdown-name">
+                            <p>Payment Mode</p>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary
+                                    dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
+                                        src="Img/bitcoin.png"> Bitcoin (BTC)</button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <button class="dropdown-item" type="button">PhonePay</button>
+                                <button class="dropdown-item" type="button">Gpay</button>
+                                <button class="dropdown-item" type="button">Paytm</button>
+                            </div>
+                        </div>
+                        <div class="btn-payment-bg text-center">
+                            <p class="text-white mb-0">Make Payment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
